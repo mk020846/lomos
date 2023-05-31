@@ -1,14 +1,14 @@
 import asyncpraw
 import discord
 from discord.ext import commands
-from config import secrets
+from utils import config
 
 class FunCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.reddit = asyncpraw.Reddit(client_id=secrets.REDDIT_CLIENT_ID,
-                                       client_secret=secrets.REDDIT_CLIENT_SECRET,
-                                       user_agent=secrets.REDDIT_USER_AGENT)
+        self.reddit = asyncpraw.Reddit(client_id=config.REDDIT_CLIENT_ID,
+                                       client_secret=config.REDDIT_CLIENT_SECRET,
+                                       user_agent=config.REDDIT_USER_AGENT)
 
     @commands.command()
     async def memes(self, ctx):
