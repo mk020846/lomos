@@ -9,4 +9,4 @@ class test_cog(commands.Cog):
         await ctx.send("pong")
 
 def setup(bot):
-    bot.add_cog(ExampleCog(bot))
+    bot.add_cog(test_cog(bot))
