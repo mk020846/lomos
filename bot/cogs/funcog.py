@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 from utils import config
 
-class FunCog(commands.Cog):
+class funcog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
         self.reddit = asyncpraw.Reddit(client_id=config.REDDIT_CLIENT_ID,
@@ -19,5 +19,5 @@ class FunCog(commands.Cog):
         await ctx.send(embed=embed)
 
 def setup(bot):
-    bot.add_cog(FunCog(bot))
+    bot.add_cog(funcog(bot))
 
