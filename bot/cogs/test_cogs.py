@@ -14,7 +14,5 @@ class ExampleCog(commands.Cog):
         if message.author == self.bot.user:
             return
 
-        await message.channel.send(".")
-
 async def setup(bot):
     await bot.add_cog(ExampleCog(bot))
